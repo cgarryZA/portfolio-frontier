@@ -1172,42 +1172,42 @@
  },
  "esportfire_300": {
   "name": "EsportFire 300",
-  "description": "300 hand-selected liquid items tracking the overall CS2 market (168 matched)",
-  "n_items": 168,
+  "description": "300 hand-selected liquid items tracking the overall CS2 market (238 matched)",
+  "n_items": 238,
   "equal_weight": {
-   "ret": 0.1224,
-   "risk": 0.5185,
-   "sharpe": 0.236,
-   "n_items": 168,
+   "ret": 0.1314,
+   "risk": 0.5925,
+   "sharpe": 0.2218,
+   "n_items": 238,
    "top_holdings": {
-    "Bayonet - Autotronic (Field-Tested)": 0.005952,
-    "Bayonet - Damascus Steel (Field-Tested)": 0.005952,
-    "Bayonet - Freehand (Field-Tested)": 0.005952,
-    "Bayonet - Marble Fade (Factory New)": 0.005952,
-    "Bowie Knife - Autotronic (Field-Tested)": 0.005952,
-    "Bowie Knife - Black Laminate (Field-Tested)": 0.005952,
-    "Bowie Knife - Lore (Field-Tested)": 0.005952,
-    "Broken Fang Gloves - Needle Point (Field-Tested)": 0.005952,
-    "Broken Fang Gloves - Yellow-banded (Field-Tested)": 0.005952,
-    "Butterfly Knife - Autotronic (Field-Tested)": 0.005952
+    "Bayonet - Autotronic (Field-Tested)": 0.004202,
+    "Bayonet - Damascus Steel (Field-Tested)": 0.004202,
+    "Bayonet - Freehand (Field-Tested)": 0.004202,
+    "Bayonet - Marble Fade (Factory New)": 0.004202,
+    "Bowie Knife - Autotronic (Field-Tested)": 0.004202,
+    "Bowie Knife - Black Laminate (Field-Tested)": 0.004202,
+    "Bowie Knife - Lore (Field-Tested)": 0.004202,
+    "Broken Fang Gloves - Needle Point (Field-Tested)": 0.004202,
+    "Broken Fang Gloves - Yellow-banded (Field-Tested)": 0.004202,
+    "Butterfly Knife - Autotronic (Field-Tested)": 0.004202
    }
   },
   "max_sharpe": {
-   "ret": 0.6297,
-   "risk": 0.6025,
-   "sharpe": 1.0452,
-   "n_items": 10,
+   "ret": 0.6282,
+   "risk": 0.599,
+   "sharpe": 1.0487,
+   "n_items": 12,
    "top_holdings": {
-    "M4A1-S - Hot Rod (Factory New)": 0.233107,
-    "M4A4 - Hellfire (Field-Tested)": 0.176944,
-    "M4A1-S - Cyrex (Field-Tested)": 0.139322,
-    "P2000 - Scorpion (Factory New)": 0.120756,
-    "M4A4 - Buzz Kill (Field-Tested)": 0.110966,
-    "SSG 08 - Dragonfire (Field-Tested)": 0.096835,
-    "P2000 - Fire Elemental (Field-Tested)": 0.039198,
-    "P90 - Asiimov (Field-Tested)": 0.033761,
-    "MAC-10 - Neon Rider (Field-Tested)": 0.027558,
-    "R8 Revolver - Fade (Field-Tested)": 0.021553
+    "M4A1-S - Hot Rod (Factory New)": 0.22349,
+    "M4A4 - Hellfire (Field-Tested)": 0.168228,
+    "M4A1-S - Cyrex (Field-Tested)": 0.132798,
+    "P2000 - Scorpion (Factory New)": 0.115547,
+    "M4A4 - Buzz Kill (Field-Tested)": 0.105031,
+    "SSG 08 - Dragonfire (Field-Tested)": 0.091493,
+    "Five-SeveN - Hyper Beast (Field-Tested)": 0.043654,
+    "P2000 - Fire Elemental (Field-Tested)": 0.034195,
+    "P90 - Asiimov (Field-Tested)": 0.029049,
+    "MAC-10 - Neon Rider (Field-Tested)": 0.022974
    }
   },
   "top10_sharpe": {
@@ -1255,6 +1255,13 @@
      "price": 297.64
     },
     {
+     "name": "Five-SeveN - Hyper Beast (Field-Tested)",
+     "sharpe": 0.514,
+     "ret": 0.575194,
+     "vol": 1.1191,
+     "price": 330.25
+    },
+    {
      "name": "P2000 - Fire Elemental (Field-Tested)",
      "sharpe": 0.4985,
      "ret": 0.539425,
@@ -1274,21 +1281,14 @@
      "ret": 0.577044,
      "vol": 1.1883,
      "price": 126.17
-    },
-    {
-     "name": "R8 Revolver - Fade (Field-Tested)",
-     "sharpe": 0.4761,
-     "ret": 0.557836,
-     "vol": 1.1717,
-     "price": 92.57
     }
    ]
   },
   "index_stats": {
-   "avg_return": 0.1224,
-   "median_return": 0.1161,
-   "avg_vol": 1.0252,
-   "pct_positive": 0.6726,
+   "avg_return": 0.1314,
+   "median_return": 0.1412,
+   "avg_vol": 1.172,
+   "pct_positive": 0.7311,
    "best_item": "M4A1-S - Hot Rod (Factory New)",
    "best_sharpe": 0.6973
   }
