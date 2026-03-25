@@ -56,14 +56,50 @@ KNIFE_KEYWORDS = [
 
 
 def classify_item(name: str) -> str:
-    """Classify an item into a weapon type category."""
-    if any(name.startswith(k) for k in KNIFE_KEYWORDS):
-        return "knife"
-    if "Glove" in name or "Wraps" in name:
+    """Classify an item into a weapon type category.
+
+    Handles various naming formats:
+    - "AK-47 - Asiimov" (processed dir name)
+    - "AK-47 - Asiimov (Factory New)" (full item name)
+    - "Glock-18 _ Gamma Doppler (Factory New) - Phase 1" (PriceEmpire format)
+    - "Cases (Kilowatt Case)" (case items)
+    - "Stickers (Katowice 2014)" etc.
+    """
+    # Normalize: strip ST prefix, clean separators
+    clean = name.replace("ST ", "").strip()
+
+    # Check for cases, stickers, patches, agents, music kits, etc.
+    for prefix in ["Cases", "Stickers", "Patches", "Agents", "Music Kit",
+                    "Collectibles", "Graffiti", "Keychains"]:
+        if clean.startswith(prefix):
+            return "other"
+
+    # Check knives (handle both "Bayonet - Fade" and "Bayonet Fade")
+    for k in KNIFE_KEYWORDS:
+        if clean.startswith(k + " ") or clean.startswith(k + " -") or clean.startswith(k + " _"):
+            return "knife"
+
+    # Check gloves
+    if "Glove" in clean or "Wraps" in clean:
         return "glove"
+
+    # Extract weapon name: try splitting on " - " or " _ "
+    # e.g., "AK-47 - Asiimov" -> "AK-47"
+    # e.g., "Glock-18 _ Gamma Doppler (FN)" -> "Glock-18"
+    weapon_part = clean
+    for sep in [" - ", " _ ", " | "]:
+        if sep in clean:
+            weapon_part = clean.split(sep)[0].strip()
+            break
+
+    # Also handle "(wear)" suffix on the weapon part
+    if "(" in weapon_part:
+        weapon_part = weapon_part.split("(")[0].strip()
+
     for weapon, wtype in WEAPON_TYPES.items():
-        if name.startswith(weapon):
+        if weapon_part == weapon or clean.startswith(weapon + " "):
             return wtype
+
     return "other"
 
 
@@ -136,7 +172,7 @@ def load_all_items(prices_dir: Path, min_days: int = 180, max_gap_pct: float = 0
             items[full_name] = {
                 "dates": [d[0] for d in daily],
                 "prices": [d[1] for d in daily],
-                "type": classify_item(item_name_raw.split(" - ")[0].strip()),
+                "type": classify_item(item_name_raw),
                 "n_days": len(daily),
                 "date_range": [daily[0][0], daily[-1][0]],
             }
@@ -277,19 +313,20 @@ def compute_item_stats(names, returns, prices, items):
     return stats
 
 
-def solve_efficient_frontier(mu, Sigma, n_points=80, long_only=True):
-    """Solve mean-variance optimization for frontier points."""
+def solve_efficient_frontier(mu, Sigma, names, n_points=80, long_only=True):
+    """Solve mean-variance optimization for frontier points.
+
+    mu and Sigma are in DAILY scale. Output is ANNUALIZED.
+    """
     from scipy.optimize import minimize
 
+    ANN_RET = 365
+    ANN_RISK = math.sqrt(365)
     n = len(mu)
 
-    # Bounds
     bounds = [(0, 1)] * n if long_only else [(None, None)] * n
-
-    # Constraints: weights sum to 1
     constraints = [{"type": "eq", "fun": lambda w: np.sum(w) - 1.0}]
 
-    # Target returns range
     min_ret = float(np.min(mu))
     max_ret = float(np.max(mu))
     if max_ret <= min_ret:
@@ -298,7 +335,7 @@ def solve_efficient_frontier(mu, Sigma, n_points=80, long_only=True):
     targets = np.linspace(min_ret * 0.5, max_ret * 0.8, n_points)
     frontier = []
 
-    w0 = np.ones(n) / n  # equal weight starting point
+    w0 = np.ones(n) / n
 
     for target in targets:
         cons = constraints + [
@@ -313,18 +350,14 @@ def solve_efficient_frontier(mu, Sigma, n_points=80, long_only=True):
             )
             if result.success:
                 w = result.x
-                port_ret = float(w @ mu)
-                port_risk = float(np.sqrt(w @ Sigma @ w))
-                # Only keep non-trivial weights
-                top_weights = {
-                    name: round(float(wi), 6)
-                    for name, wi in zip(range(n), w)
-                    if abs(wi) > 1e-4
-                }
+                port_ret = float(w @ mu) * ANN_RET
+                port_risk = float(np.sqrt(w @ Sigma @ w)) * ANN_RISK
+                n_assets = sum(1 for wi in w if abs(wi) > 1e-4)
                 frontier.append({
                     "ret": round(port_ret, 6),
                     "risk": round(port_risk, 6),
-                    "n_assets": len(top_weights),
+                    "sharpe": round(port_ret / port_risk, 4) if port_risk > 1e-9 else 0,
+                    "n_assets": n_assets,
                 })
                 w0 = w  # warm start
         except Exception:
@@ -334,23 +367,35 @@ def solve_efficient_frontier(mu, Sigma, n_points=80, long_only=True):
 
 
 def compute_special_portfolios(mu, Sigma, names):
-    """Compute special portfolio allocations."""
+    """Compute special portfolio allocations.
+
+    mu and Sigma are in DAILY scale. Output is ANNUALIZED.
+    """
     from scipy.optimize import minimize
 
+    ANN_RET = 365
+    ANN_RISK = math.sqrt(365)
     n = len(mu)
     bounds = [(0, 1)] * n
     cons_sum = {"type": "eq", "fun": lambda w: np.sum(w) - 1.0}
     w0 = np.ones(n) / n
 
+    def annualize_portfolio(w):
+        ret = float(w @ mu) * ANN_RET
+        risk = float(np.sqrt(w @ Sigma @ w)) * ANN_RISK
+        sharpe = ret / risk if risk > 1e-9 else 0
+        return {
+            "ret": round(ret, 6),
+            "risk": round(risk, 4),
+            "sharpe": round(sharpe, 4),
+            "top_holdings": get_top_holdings(w, names, 10),
+        }
+
     portfolios = {}
 
     # 1. Equal weight
     ew = np.ones(n) / n
-    portfolios["equal_weight"] = {
-        "ret": round(float(ew @ mu), 6),
-        "risk": round(float(np.sqrt(ew @ Sigma @ ew)), 6),
-        "top_holdings": get_top_holdings(ew, names, 10),
-    }
+    portfolios["equal_weight"] = annualize_portfolio(ew)
 
     # 2. Global minimum variance
     try:
@@ -361,12 +406,7 @@ def compute_special_portfolios(mu, Sigma, names):
             options={"maxiter": 500},
         )
         if res.success:
-            w = res.x
-            portfolios["min_variance"] = {
-                "ret": round(float(w @ mu), 6),
-                "risk": round(float(np.sqrt(w @ Sigma @ w)), 6),
-                "top_holdings": get_top_holdings(w, names, 10),
-            }
+            portfolios["min_variance"] = annualize_portfolio(res.x)
     except Exception:
         pass
 
@@ -383,13 +423,7 @@ def compute_special_portfolios(mu, Sigma, names):
             options={"maxiter": 500},
         )
         if res.success:
-            w = res.x
-            portfolios["max_sharpe"] = {
-                "ret": round(float(w @ mu), 6),
-                "risk": round(float(np.sqrt(w @ Sigma @ w)), 6),
-                "sharpe": round(float(-neg_sharpe(w)), 4),
-                "top_holdings": get_top_holdings(w, names, 10),
-            }
+            portfolios["max_sharpe"] = annualize_portfolio(res.x)
     except Exception:
         pass
 
@@ -399,8 +433,8 @@ def compute_special_portfolios(mu, Sigma, names):
             sigma_p = np.sqrt(w @ Sigma @ w)
             if sigma_p < 1e-12:
                 return 1e10
-            mrc = (Sigma @ w) / sigma_p  # marginal risk contribution
-            rc = w * mrc  # risk contribution
+            mrc = (Sigma @ w) / sigma_p
+            rc = w * mrc
             target = sigma_p / n
             return float(np.sum((rc - target) ** 2))
 
@@ -410,12 +444,7 @@ def compute_special_portfolios(mu, Sigma, names):
             options={"maxiter": 500},
         )
         if res.success:
-            w = res.x
-            portfolios["risk_parity"] = {
-                "ret": round(float(w @ mu), 6),
-                "risk": round(float(np.sqrt(w @ Sigma @ w)), 6),
-                "top_holdings": get_top_holdings(w, names, 10),
-            }
+            portfolios["risk_parity"] = annualize_portfolio(res.x)
     except Exception:
         pass
 
@@ -556,7 +585,7 @@ def main():
 
     # Step 5: Efficient frontier
     print("\nSTEP 5: Solving efficient frontier (long-only)...")
-    frontier_lo = solve_efficient_frontier(valid_mu, Sigma, n_points=80, long_only=True)
+    frontier_lo = solve_efficient_frontier(valid_mu, Sigma, valid_names, n_points=80, long_only=True)
     print(f"  {len(frontier_lo)} frontier points computed")
 
     # Step 6: Special portfolios
