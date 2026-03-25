@@ -36,18 +36,11 @@ def define_indices(items):
     """Define which items belong to each index."""
     indices = {}
 
-    # Cases
-    indices["cases"] = {
-        "name": "CS2 Cases",
-        "description": "All weapon cases",
-        "items": [k for k in items if "Case" in k and items[k]["type"] == "other"],
-    }
-
     # Katowice 2014
     indices["katowice_2014"] = {
         "name": "Katowice 2014",
         "description": "Stickers and capsules from EMS One Katowice 2014",
-        "items": [k for k in items if "Katowice 2014" in k],
+        "items": [k for k in items if "Katowice 2014" in k or "Katowice 2014" in items[k].get("display_name", "")],
     }
 
     # Knives
@@ -89,7 +82,14 @@ def define_indices(items):
     indices["patches"] = {
         "name": "Patches",
         "description": "All patches and patch packs",
-        "items": [k for k in items if "Patch" in k],
+        "items": [k for k in items if items[k]["type"] == "patch"],
+    }
+
+    # Stickers
+    indices["stickers"] = {
+        "name": "Stickers",
+        "description": "All tournament and decorative stickers",
+        "items": [k for k in items if items[k]["type"] == "sticker"],
     }
 
     # Charms/Keychains
@@ -99,29 +99,25 @@ def define_indices(items):
         "items": [k for k in items if "Charm" in k or "Keychain" in k],
     }
 
-    # Agents (the character models, not skins named "Agent")
-    agent_keywords = [
-        "Cmdr.", "Lt. Commander", "Sgt.", "Chem-Haz", "Vypa", "Dragomir",
-        "Maximus", "Buckshot", "Ground Rebel", "Elite Crew", "Operator",
-        "Professional", "Anarchist", "Phoenix", "Seal Frogman", "KSK",
-        "TACP", "Danger Zone", "Street Soldier", "Avenue", "Getaway Sally",
-        "Little Kev", "Safecracker", "Number K", "Sir Bloody", "Ava",
-        "Doctor Romanov", "Chef d'Escadron", "Crasswater", "Primeiro",
-        "D Squadron", "B Squadron", "The Doctor", "The Elite Mr. Muhlik",
-    ]
-    agents_items = []
-    for k in items:
-        name_lower = k.lower()
-        # Must be in "other" type and match agent keywords
-        if items[k]["type"] == "other":
-            for kw in agent_keywords:
-                if kw.lower() in name_lower:
-                    agents_items.append(k)
-                    break
+    # Cases
+    indices["cases"] = {
+        "name": "CS2 Cases",
+        "description": "All weapon cases",
+        "items": [k for k in items if items[k]["type"] == "case"],
+    }
+
+    # Souvenirs
+    indices["souvenirs"] = {
+        "name": "Souvenirs",
+        "description": "All souvenir weapon skins",
+        "items": [k for k in items if items[k]["type"] == "souvenir"],
+    }
+
+    # Agents
     indices["agents"] = {
         "name": "Agents",
         "description": "Character model skins",
-        "items": agents_items,
+        "items": [k for k in items if items[k]["type"] == "agent"],
     }
 
     # EsportFire 300 Index (curated list of 300 liquid items)
@@ -175,6 +171,11 @@ def compute_index_portfolio(item_names, all_items_data):
 
     if len(valid) < 2:
         return None
+
+    # Cap at 500 items for optimizer tractability (top by abs Sharpe)
+    if len(valid) > 500:
+        valid.sort(key=lambda x: abs(x[1].get("sharpe", 0)), reverse=True)
+        valid = valid[:500]
 
     names = [v[0] for v in valid]
     n = len(names)

@@ -19,7 +19,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     mg: "#ec4899",
     knife: "#38bdf8",
     glove: "#f97316",
-    other: "#6b7280",
+    sticker: "#818cf8",
+    case: "#fbbf24",
+    patch: "#34d399",
+    graffiti: "#9ca3af",
+    souvenir: "#fb923c",
+    agent: "#f472b6",
+    music_kit: "#c084fc",
+    collectible: "#67e8f9",
   };
 
   // ─── Helpers ───
@@ -406,7 +413,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const typeVal = typeFilter.value;
       const sortVal = sortBy.value;
 
-      if (query) entries = entries.filter(([name]) => name.toLowerCase().includes(query));
+      if (query) entries = entries.filter(([name, d]) => (d.display_name || name).toLowerCase().includes(query));
       if (typeVal !== "all") entries = entries.filter(([, d]) => d.type === typeVal);
 
       entries.sort((a, b) => {
@@ -436,8 +443,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       shown.forEach(([name, d]) => {
         const retColor = d.mean_ret > 0 ? "#22c55e" : "#ef4444";
+        const displayName = d.display_name || name;
         html += `<tr style="border-bottom:1px solid rgba(255,255,255,.05);">
-          <td style="padding:4px 6px;max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${name}</td>
+          <td style="padding:4px 6px;max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${displayName}</td>
           <td style="padding:4px 6px;"><span style="color:${TYPE_COLORS[d.type] || '#6b7280'}">${d.type}</span></td>
           <td style="padding:4px 6px;text-align:right;">$${d.last_price?.toFixed(2) || "?"}</td>
           <td style="padding:4px 6px;text-align:right;color:${retColor};">${pct(d.mean_ret)}</td>
