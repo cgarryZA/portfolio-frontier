@@ -124,6 +124,39 @@ def define_indices(items):
         "items": agents_items,
     }
 
+    # EsportFire 300 Index (curated list of 300 liquid items)
+    ef300_file = ROOT / "data" / "esportfire300.json"
+    if ef300_file.exists():
+        with open(ef300_file) as f:
+            ef300 = json.load(f)
+        # Match EF300 item names to our item names (fuzzy: our names use " - " separator)
+        ef300_matched = []
+        ef300_names = ef300.get("items", [])
+        for ef_name in ef300_names:
+            # Direct match first
+            if ef_name in items:
+                ef300_matched.append(ef_name)
+                continue
+            # Try with ST prefix
+            st_name = f"ST {ef_name}"
+            if st_name in items:
+                ef300_matched.append(st_name)
+                continue
+            # Fuzzy: some names might differ slightly
+            # Check if any item contains the key parts
+            parts = ef_name.replace("★ ", "").strip()
+            for item_name in items:
+                clean = item_name.replace("ST ", "")
+                if clean == parts or clean == ef_name:
+                    ef300_matched.append(item_name)
+                    break
+
+        indices["esportfire_300"] = {
+            "name": "EsportFire 300",
+            "description": f"300 hand-selected liquid items tracking the overall CS2 market ({len(ef300_matched)} matched)",
+            "items": ef300_matched,
+        }
+
     return indices
 
 
