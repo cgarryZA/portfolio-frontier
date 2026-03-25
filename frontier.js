@@ -288,6 +288,69 @@ document.addEventListener("DOMContentLoaded", async () => {
     specialDiv.innerHTML = html;
   }
 
+  // ─── Index Portfolios ───
+  const indexDiv = document.getElementById("index-portfolios");
+  if (indexDiv) {
+    fetch("./data/precomputed/index_portfolios.json")
+      .then(r => r.ok ? r.json() : null)
+      .then(idxData => {
+        if (!idxData) {
+          indexDiv.innerHTML = `<p style="opacity:.6;">No index portfolio data. Run: python src/index_portfolios.py</p>`;
+          return;
+        }
+        // Sort by max_sharpe descending
+        const sorted = Object.entries(idxData).sort((a, b) =>
+          (b[1].max_sharpe?.sharpe || 0) - (a[1].max_sharpe?.sharpe || 0)
+        );
+
+        let html = `<table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead><tr style="border-bottom:1px solid var(--grid);text-align:left;">
+            <th style="padding:6px;">Index</th>
+            <th style="padding:6px;text-align:right;">Items</th>
+            <th style="padding:6px;text-align:right;">Max Sharpe</th>
+            <th style="padding:6px;text-align:right;">Return</th>
+            <th style="padding:6px;text-align:right;">Risk</th>
+            <th style="padding:6px;text-align:right;">% Positive</th>
+            <th style="padding:6px;">Best Item</th>
+          </tr></thead><tbody>`;
+
+        sorted.forEach(([key, idx]) => {
+          const ms = idx.max_sharpe || {};
+          const stats = idx.index_stats || {};
+          const srColor = (ms.sharpe || 0) > 1 ? "#22c55e" : (ms.sharpe || 0) > 0.5 ? "#f59e0b" : "#ef4444";
+          html += `<tr style="border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:6px;font-weight:600;">${idx.name}</td>
+            <td style="padding:6px;text-align:right;">${idx.n_items}</td>
+            <td style="padding:6px;text-align:right;color:${srColor};font-weight:600;">${ms.sharpe?.toFixed(2) || "N/A"}</td>
+            <td style="padding:6px;text-align:right;">${pct(ms.ret || 0)}</td>
+            <td style="padding:6px;text-align:right;">${pct(ms.risk || 0)}</td>
+            <td style="padding:6px;text-align:right;">${pct(stats.pct_positive || 0)}</td>
+            <td style="padding:6px;font-size:11px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${stats.best_item || ""}</td>
+          </tr>`;
+        });
+        html += `</tbody></table>`;
+
+        // Also show top holdings for best index
+        if (sorted.length > 0) {
+          const [bestKey, bestIdx] = sorted[0];
+          const holdings = bestIdx.max_sharpe?.top_holdings || {};
+          if (Object.keys(holdings).length > 0) {
+            html += `<h3 style="margin-top:16px;">Top Holdings — ${bestIdx.name} Max Sharpe Portfolio</h3>`;
+            html += `<div style="font-size:12px;display:grid;grid-template-columns:1fr auto;gap:2px 16px;max-width:500px;">`;
+            Object.entries(holdings).slice(0, 10).forEach(([name, weight]) => {
+              html += `<div>${name}</div><div style="text-align:right;">${pct(weight)}</div>`;
+            });
+            html += `</div>`;
+          }
+        }
+
+        indexDiv.innerHTML = html;
+      })
+      .catch(() => {
+        indexDiv.innerHTML = `<p style="opacity:.6;">Failed to load index data.</p>`;
+      });
+  }
+
   // ─── Sector Correlation ───
   const corrDiv = document.getElementById("sector-corr");
   if (corrDiv && data.correlation) {

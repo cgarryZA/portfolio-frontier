@@ -1,0 +1,1173 @@
+{
+ "cases": {
+  "name": "CS2 Cases",
+  "description": "All weapon cases",
+  "n_items": 492,
+  "equal_weight": {
+   "ret": 0.1106,
+   "risk": 1.322,
+   "sharpe": 0.0837,
+   "n_items": 492,
+   "top_holdings": {
+    "Cases (10 Year Birthday Sticker Capsule)": 0.002033,
+    "Cases (2021 Community Sticker Capsule)": 0.002033,
+    "Cases (Ambush Sticker Capsule)": 0.002033,
+    "Cases (Antwerp 2022 Ancient Souvenir Package)": 0.002033,
+    "Cases (Antwerp 2022 Challengers Autograph Capsule)": 0.002033,
+    "Cases (Antwerp 2022 Challengers Sticker Capsule)": 0.002033,
+    "Cases (Antwerp 2022 Champions Autograph Capsule)": 0.002033,
+    "Cases (Antwerp 2022 Contenders Autograph Capsule)": 0.002033,
+    "Cases (Antwerp 2022 Contenders Sticker Capsule)": 0.002033,
+    "Cases (Antwerp 2022 Dust II Souvenir Package)": 0.002033
+   }
+  },
+  "max_sharpe": {
+   "ret": 0.5684,
+   "risk": 0.5556,
+   "sharpe": 1.023,
+   "n_items": 10,
+   "top_holdings": {
+    "Cases (Glove Case)": 0.273907,
+    "Cases (Chroma 2 Case)": 0.193621,
+    "Cases (Spectrum 2 Case)": 0.175763,
+    "Cases (Gamma 2 Case)": 0.094081,
+    "Cases (Operation Broken Fang Case)": 0.089696,
+    "Cases (Gamma Case)": 0.061956,
+    "Cases (Spectrum Case)": 0.042455,
+    "Cases (Operation Wildfire Case)": 0.039151,
+    "Cases (Operation Breakout Weapon Case)": 0.01526,
+    "Cases (Shattered Web Case)": 0.013563
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Cases (Glove Case)",
+     "sharpe": 0.7221,
+     "ret": 0.573889,
+     "vol": 0.7947,
+     "price": 15.24
+    },
+    {
+     "name": "Cases (Spectrum 2 Case)",
+     "sharpe": 0.6661,
+     "ret": 0.670255,
+     "vol": 1.0063,
+     "price": 3.01
+    },
+    {
+     "name": "Cases (Chroma 2 Case)",
+     "sharpe": 0.6639,
+     "ret": 0.606963,
+     "vol": 0.9143,
+     "price": 4.01
+    },
+    {
+     "name": "Cases (Gamma 2 Case)",
+     "sharpe": 0.5428,
+     "ret": 0.505838,
+     "vol": 0.9319,
+     "price": 3.29
+    },
+    {
+     "name": "Cases (Operation Broken Fang Case)",
+     "sharpe": 0.533,
+     "ret": 0.479884,
+     "vol": 0.9004,
+     "price": 7.92
+    },
+    {
+     "name": "Cases (Gamma Case)",
+     "sharpe": 0.5132,
+     "ret": 0.541356,
+     "vol": 1.0548,
+     "price": 3.48
+    },
+    {
+     "name": "Cases (Operation Wildfire Case)",
+     "sharpe": 0.483,
+     "ret": 0.557977,
+     "vol": 1.1552,
+     "price": 4.25
+    },
+    {
+     "name": "Cases (Spectrum Case)",
+     "sharpe": 0.4767,
+     "ret": 0.438969,
+     "vol": 0.9209,
+     "price": 3.76
+    },
+    {
+     "name": "Cases (Shattered Web Case)",
+     "sharpe": 0.4416,
+     "ret": 0.423165,
+     "vol": 0.9584,
+     "price": 6.47
+    },
+    {
+     "name": "Cases (Operation Breakout Weapon Case)",
+     "sharpe": 0.4375,
+     "ret": 0.345812,
+     "vol": 0.7905,
+     "price": 8.66
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.1106,
+   "median_return": 0.1317,
+   "avg_vol": 2.6309,
+   "pct_positive": 0.7053,
+   "best_item": "Cases (Glove Case)",
+   "best_sharpe": 0.7221
+  }
+ },
+ "katowice_2014": {
+  "name": "Katowice 2014",
+  "description": "Stickers and capsules from EMS One Katowice 2014",
+  "n_items": 32,
+  "equal_weight": {
+   "ret": 0.2006,
+   "risk": 2.1494,
+   "sharpe": 0.0933,
+   "n_items": 32,
+   "top_holdings": {
+    "Other (EMS Katowice 2014 Challengers)": 0.03125,
+    "Other (EMS Katowice 2014 Legends)": 0.03125,
+    "Stickers (3DMAX (Holo) _ Katowice 2014)": 0.03125,
+    "Stickers (3DMAX _ Katowice 2014)": 0.03125,
+    "Stickers (Clan-Mystik (Holo) _ Katowice 2014)": 0.03125,
+    "Stickers (Clan-Mystik _ Katowice 2014)": 0.03125,
+    "Stickers (ESL Skull (Foil) _ Katowice 2014)": 0.03125,
+    "Stickers (ESL Wolf (Foil) _ Katowice 2014)": 0.03125,
+    "Stickers (Fnatic (Holo) _ Katowice 2014)": 0.03125,
+    "Stickers (Fnatic _ Katowice 2014)": 0.03125
+   }
+  },
+  "max_sharpe": {
+   "ret": 0.2468,
+   "risk": 1.3122,
+   "sharpe": 0.1881,
+   "n_items": 7,
+   "top_holdings": {
+    "Stickers (Team Dignitas _ Katowice 2014)": 0.443158,
+    "Stickers (Reason Gaming _ Katowice 2014)": 0.134476,
+    "Stickers (iBUYPOWER _ Katowice 2014)": 0.124534,
+    "Stickers (LGB eSports _ Katowice 2014)": 0.11403,
+    "Stickers (Natus Vincere _ Katowice 2014)": 0.102106,
+    "Stickers (mousesports _ Katowice 2014)": 0.064149,
+    "Stickers (HellRaisers _ Katowice 2014)": 0.017546
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Stickers (Team Dignitas _ Katowice 2014)",
+     "sharpe": 0.1476,
+     "ret": 0.228958,
+     "vol": 1.5508,
+     "price": 1048.11
+    },
+    {
+     "name": "Stickers (Reason Gaming _ Katowice 2014)",
+     "sharpe": 0.1194,
+     "ret": 0.375837,
+     "vol": 3.1477,
+     "price": 8400.0
+    },
+    {
+     "name": "Stickers (iBUYPOWER _ Katowice 2014)",
+     "sharpe": 0.1068,
+     "ret": 0.253356,
+     "vol": 2.3717,
+     "price": 4861.62
+    },
+    {
+     "name": "Stickers (LGB eSports _ Katowice 2014)",
+     "sharpe": 0.0996,
+     "ret": 0.210315,
+     "vol": 2.1106,
+     "price": 1347.09
+    },
+    {
+     "name": "Stickers (Natus Vincere _ Katowice 2014)",
+     "sharpe": 0.0966,
+     "ret": 0.20055,
+     "vol": 2.0757,
+     "price": 1044.89
+    },
+    {
+     "name": "Stickers (mousesports _ Katowice 2014)",
+     "sharpe": 0.0927,
+     "ret": 0.239437,
+     "vol": 2.582,
+     "price": 858.98
+    },
+    {
+     "name": "Stickers (HellRaisers _ Katowice 2014)",
+     "sharpe": 0.0793,
+     "ret": 0.195706,
+     "vol": 2.468,
+     "price": 688.39
+    },
+    {
+     "name": "Stickers (Team LDLC.com _ Katowice 2014)",
+     "sharpe": 0.0699,
+     "ret": 0.13012,
+     "vol": 1.8607,
+     "price": 1588.8
+    },
+    {
+     "name": "Stickers (Vox Eminor _ Katowice 2014)",
+     "sharpe": 0.0671,
+     "ret": 0.176974,
+     "vol": 2.6394,
+     "price": 1015.82
+    },
+    {
+     "name": "Stickers (Virtus.Pro _ Katowice 2014)",
+     "sharpe": 0.0649,
+     "ret": 0.229433,
+     "vol": 3.534,
+     "price": 880.37
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.2006,
+   "median_return": 0.1957,
+   "avg_vol": 4.0681,
+   "pct_positive": 1.0,
+   "best_item": "Stickers (Team Dignitas _ Katowice 2014)",
+   "best_sharpe": 0.1476
+  }
+ },
+ "knives": {
+  "name": "Knives",
+  "description": "All knife skins across all knife types",
+  "n_items": 1651,
+  "equal_weight": {
+   "ret": -0.0279,
+   "risk": 0.5986,
+   "sharpe": -0.0467,
+   "n_items": 1651,
+   "top_holdings": {}
+  },
+  "max_sharpe": {
+   "ret": 0.1959,
+   "risk": 0.4189,
+   "sharpe": 0.4678,
+   "n_items": 8,
+   "top_holdings": {
+    "Survival Knife - Marble Fade (Minimal Wear)": 0.569749,
+    "M9 Bayonet - Doppler (Factory New)": 0.129474,
+    "Survival Knife - Rust Coat (Well-Worn)": 0.108276,
+    "Karambit - Doppler (Factory New)": 0.055901,
+    "Skeleton Knife - Ultraviolet (Factory New)": 0.041957,
+    "Butterfly Knife - Doppler (Factory New)": 0.039707,
+    "Karambit - Gamma Doppler (Factory New)": 0.035206,
+    "M9 Bayonet - Gamma Doppler (Factory New)": 0.019729
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Survival Knife - Marble Fade (Minimal Wear)",
+     "sharpe": 0.3882,
+     "ret": 0.167682,
+     "vol": 0.432,
+     "price": 184.94
+    },
+    {
+     "name": "Survival Knife - Rust Coat (Well-Worn)",
+     "sharpe": 0.2826,
+     "ret": 0.308804,
+     "vol": 1.0925,
+     "price": 63.26
+    },
+    {
+     "name": "M9 Bayonet - Doppler (Factory New)",
+     "sharpe": 0.2584,
+     "ret": 0.187034,
+     "vol": 0.7237,
+     "price": 1154.17
+    },
+    {
+     "name": "Skeleton Knife - Ultraviolet (Factory New)",
+     "sharpe": 0.2367,
+     "ret": 0.363747,
+     "vol": 1.5367,
+     "price": 596.35
+    },
+    {
+     "name": "Karambit - Doppler (Factory New)",
+     "sharpe": 0.2202,
+     "ret": 0.17098,
+     "vol": 0.7765,
+     "price": 1458.57
+    },
+    {
+     "name": "Butterfly Knife - Doppler (Factory New)",
+     "sharpe": 0.2124,
+     "ret": 0.181637,
+     "vol": 0.8552,
+     "price": 2298.95
+    },
+    {
+     "name": "Karambit - Gamma Doppler (Factory New)",
+     "sharpe": 0.2085,
+     "ret": 0.207726,
+     "vol": 0.9961,
+     "price": 2022.89
+    },
+    {
+     "name": "M9 Bayonet - Gamma Doppler (Factory New)",
+     "sharpe": 0.1965,
+     "ret": 0.173016,
+     "vol": 0.8804,
+     "price": 1507.47
+    },
+    {
+     "name": "Butterfly Knife - Safari Mesh (Field-Tested)",
+     "sharpe": 0.1807,
+     "ret": 0.122342,
+     "vol": 0.6769,
+     "price": 484.96
+    },
+    {
+     "name": "Karambit - Blue Steel (Field-Tested)",
+     "sharpe": 0.1793,
+     "ret": 0.178143,
+     "vol": 0.9936,
+     "price": 868.02
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": -0.0279,
+   "median_return": -0.0266,
+   "avg_vol": 1.1956,
+   "pct_positive": 0.3895,
+   "best_item": "Survival Knife - Marble Fade (Minimal Wear)",
+   "best_sharpe": 0.3882
+  }
+ },
+ "gloves": {
+  "name": "Gloves",
+  "description": "All glove and hand wrap skins",
+  "n_items": 358,
+  "equal_weight": {
+   "ret": -0.0548,
+   "risk": 0.7131,
+   "sharpe": -0.0768,
+   "n_items": 358,
+   "top_holdings": {
+    "Bloodhound Gloves - Bronzed (Battle-Scarred)": 0.002793,
+    "Bloodhound Gloves - Bronzed (Factory New)": 0.002793,
+    "Bloodhound Gloves - Bronzed (Field-Tested)": 0.002793,
+    "Bloodhound Gloves - Bronzed (Minimal Wear)": 0.002793,
+    "Bloodhound Gloves - Bronzed (Well-Worn)": 0.002793,
+    "Bloodhound Gloves - Charred (Battle-Scarred)": 0.002793,
+    "Bloodhound Gloves - Charred (Factory New)": 0.002793,
+    "Bloodhound Gloves - Charred (Field-Tested)": 0.002793,
+    "Bloodhound Gloves - Charred (Minimal Wear)": 0.002793,
+    "Bloodhound Gloves - Charred (Well-Worn)": 0.002793
+   }
+  },
+  "max_sharpe": {
+   "ret": 0.3554,
+   "risk": 0.5939,
+   "sharpe": 0.5985,
+   "n_items": 16,
+   "top_holdings": {
+    "Driver Gloves - Lunar Weave (Field-Tested)": 0.154211,
+    "Sport Gloves - Hedge Maze (Battle-Scarred)": 0.113132,
+    "Moto Gloves - Cool Mint (Field-Tested)": 0.098408,
+    "Specialist Gloves - Emerald Web (Field-Tested)": 0.093523,
+    "Sport Gloves - Hedge Maze (Field-Tested)": 0.083214,
+    "Hand Wraps - Leather (Field-Tested)": 0.081915,
+    "Driver Gloves - Diamondback (Field-Tested)": 0.065005,
+    "Hand Wraps - Leather (Minimal Wear)": 0.058471,
+    "Hand Wraps - Spruce DDPAT (Minimal Wear)": 0.054647,
+    "Driver Gloves - Crimson Weave (Field-Tested)": 0.044913
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Driver Gloves - Lunar Weave (Field-Tested)",
+     "sharpe": 0.3889,
+     "ret": 0.407212,
+     "vol": 1.0471,
+     "price": 1175.35
+    },
+    {
+     "name": "Sport Gloves - Hedge Maze (Battle-Scarred)",
+     "sharpe": 0.3654,
+     "ret": 0.427127,
+     "vol": 1.169,
+     "price": 2919.18
+    },
+    {
+     "name": "Moto Gloves - Cool Mint (Field-Tested)",
+     "sharpe": 0.3442,
+     "ret": 0.358353,
+     "vol": 1.041,
+     "price": 1967.06
+    },
+    {
+     "name": "Specialist Gloves - Emerald Web (Field-Tested)",
+     "sharpe": 0.3381,
+     "ret": 0.338262,
+     "vol": 1.0004,
+     "price": 2197.22
+    },
+    {
+     "name": "Sport Gloves - Hedge Maze (Field-Tested)",
+     "sharpe": 0.3332,
+     "ret": 0.352596,
+     "vol": 1.0583,
+     "price": 5388.19
+    },
+    {
+     "name": "Hand Wraps - Leather (Field-Tested)",
+     "sharpe": 0.3316,
+     "ret": 0.347909,
+     "vol": 1.0491,
+     "price": 892.67
+    },
+    {
+     "name": "Driver Gloves - Diamondback (Field-Tested)",
+     "sharpe": 0.3174,
+     "ret": 0.327817,
+     "vol": 1.0328,
+     "price": 736.27
+    },
+    {
+     "name": "Hand Wraps - Spruce DDPAT (Minimal Wear)",
+     "sharpe": 0.3122,
+     "ret": 0.342601,
+     "vol": 1.0973,
+     "price": 1086.45
+    },
+    {
+     "name": "Hand Wraps - Leather (Minimal Wear)",
+     "sharpe": 0.3117,
+     "ret": 0.318446,
+     "vol": 1.0215,
+     "price": 1330.43
+    },
+    {
+     "name": "Driver Gloves - Crimson Weave (Field-Tested)",
+     "sharpe": 0.3032,
+     "ret": 0.324895,
+     "vol": 1.0716,
+     "price": 1916.27
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": -0.0548,
+   "median_return": -0.1117,
+   "avg_vol": 1.4155,
+   "pct_positive": 0.3101,
+   "best_item": "Driver Gloves - Lunar Weave (Field-Tested)",
+   "best_sharpe": 0.3889
+  }
+ },
+ "rifles": {
+  "name": "Rifles",
+  "description": "AK-47, M4A4, M4A1-S, AWP, FAMAS, Galil, AUG, SG, SSG, SCAR, G3SG1",
+  "n_items": 2102,
+  "equal_weight": {
+   "ret": 0.1107,
+   "risk": 0.9611,
+   "sharpe": 0.1152,
+   "n_items": 2102,
+   "top_holdings": {}
+  },
+  "max_sharpe": {
+   "ret": 0.7597,
+   "risk": 0.5442,
+   "sharpe": 1.396,
+   "n_items": 23,
+   "top_holdings": {
+    "M4A4 - Dark Blossom (Factory New)": 0.194923,
+    "M4A4 - The Coalition (Minimal Wear)": 0.106902,
+    "M4A4 - The Coalition (Field-Tested)": 0.085704,
+    "M4A1-S - Moss Quartz (Factory New)": 0.084826,
+    "FAMAS - Meltdown (Factory New)": 0.073824,
+    "AWP - Elite Build (Factory New)": 0.063104,
+    "M4A4 - The Coalition (Factory New)": 0.059108,
+    "M4A4 - The Coalition (Battle-Scarred)": 0.050511,
+    "Galil AR - Amber Fade (Factory New)": 0.047637,
+    "M4A1-S - Hot Rod (Factory New)": 0.046271
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "M4A4 - Dark Blossom (Factory New)",
+     "sharpe": 0.9566,
+     "ret": 0.859435,
+     "vol": 0.8984,
+     "price": 198.18
+    },
+    {
+     "name": "M4A4 - The Coalition (Minimal Wear)",
+     "sharpe": 0.8277,
+     "ret": 0.82801,
+     "vol": 1.0004,
+     "price": 939.54
+    },
+    {
+     "name": "M4A4 - The Coalition (Field-Tested)",
+     "sharpe": 0.814,
+     "ret": 0.940187,
+     "vol": 1.155,
+     "price": 641.08
+    },
+    {
+     "name": "M4A1-S - Moss Quartz (Factory New)",
+     "sharpe": 0.7775,
+     "ret": 0.742562,
+     "vol": 0.955,
+     "price": 214.29
+    },
+    {
+     "name": "FAMAS - Meltdown (Factory New)",
+     "sharpe": 0.7693,
+     "ret": 0.793795,
+     "vol": 1.0319,
+     "price": 276.25
+    },
+    {
+     "name": "M4A4 - The Coalition (Factory New)",
+     "sharpe": 0.7367,
+     "ret": 0.738905,
+     "vol": 1.0031,
+     "price": 2482.36
+    },
+    {
+     "name": "M4A4 - The Coalition (Battle-Scarred)",
+     "sharpe": 0.7364,
+     "ret": 0.865047,
+     "vol": 1.1747,
+     "price": 244.64
+    },
+    {
+     "name": "AWP - Elite Build (Factory New)",
+     "sharpe": 0.7286,
+     "ret": 0.639788,
+     "vol": 0.8781,
+     "price": 471.59
+    },
+    {
+     "name": "Galil AR - Amber Fade (Factory New)",
+     "sharpe": 0.7096,
+     "ret": 0.675397,
+     "vol": 0.9518,
+     "price": 114.43
+    },
+    {
+     "name": "M4A1-S - Hot Rod (Factory New)",
+     "sharpe": 0.6973,
+     "ret": 0.586208,
+     "vol": 0.8407,
+     "price": 2801.66
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.1107,
+   "median_return": 0.1766,
+   "avg_vol": 1.9194,
+   "pct_positive": 0.7031,
+   "best_item": "M4A4 - Dark Blossom (Factory New)",
+   "best_sharpe": 0.9566
+  }
+ },
+ "pistols": {
+  "name": "Pistols",
+  "description": "Glock-18, USP-S, P2000, Desert Eagle, Five-SeveN, etc.",
+  "n_items": 1865,
+  "equal_weight": {
+   "ret": 0.1334,
+   "risk": 1.0976,
+   "sharpe": 0.1215,
+   "n_items": 1865,
+   "top_holdings": {}
+  },
+  "max_sharpe": {
+   "ret": 0.6825,
+   "risk": 0.5056,
+   "sharpe": 1.3499,
+   "n_items": 22,
+   "top_holdings": {
+    "P2000 - Silver (Factory New)": 0.156776,
+    "Five-SeveN - Fairy Tale (Factory New)": 0.140365,
+    "Glock-18 - Twilight Galaxy (Factory New)": 0.095917,
+    "Tec-9 - Whiteout (Factory New)": 0.077851,
+    "USP-S - Pathfinder (Factory New)": 0.07725,
+    "USP-S - Purple DDPAT (Factory New)": 0.071881,
+    "USP-S - Whiteout (Field-Tested)": 0.066425,
+    "Five-SeveN - Hyper Beast (Battle-Scarred)": 0.056333,
+    "P2000 - Fire Elemental (Factory New)": 0.038522,
+    "Five-SeveN - Hot Shot (Factory New)": 0.038239
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "P2000 - Silver (Factory New)",
+     "sharpe": 0.9137,
+     "ret": 0.90402,
+     "vol": 0.9894,
+     "price": 271.36
+    },
+    {
+     "name": "Five-SeveN - Fairy Tale (Factory New)",
+     "sharpe": 0.831,
+     "ret": 0.678296,
+     "vol": 0.8162,
+     "price": 680.91
+    },
+    {
+     "name": "Glock-18 - Twilight Galaxy (Factory New)",
+     "sharpe": 0.7787,
+     "ret": 0.712133,
+     "vol": 0.9145,
+     "price": 1327.43
+    },
+    {
+     "name": "USP-S - Purple DDPAT (Factory New)",
+     "sharpe": 0.7411,
+     "ret": 0.712008,
+     "vol": 0.9607,
+     "price": 231.77
+    },
+    {
+     "name": "USP-S - Pathfinder (Factory New)",
+     "sharpe": 0.7358,
+     "ret": 0.631834,
+     "vol": 0.8587,
+     "price": 120.61
+    },
+    {
+     "name": "USP-S - Whiteout (Field-Tested)",
+     "sharpe": 0.7206,
+     "ret": 0.63665,
+     "vol": 0.8835,
+     "price": 99.6
+    },
+    {
+     "name": "Five-SeveN - Hyper Beast (Battle-Scarred)",
+     "sharpe": 0.7068,
+     "ret": 0.650076,
+     "vol": 0.9198,
+     "price": 298.45
+    },
+    {
+     "name": "Tec-9 - Whiteout (Factory New)",
+     "sharpe": 0.6944,
+     "ret": 0.400236,
+     "vol": 0.5763,
+     "price": 397.36
+    },
+    {
+     "name": "Five-SeveN - Hot Shot (Factory New)",
+     "sharpe": 0.6883,
+     "ret": 0.773052,
+     "vol": 1.1231,
+     "price": 99.74
+    },
+    {
+     "name": "P2000 - Fire Elemental (Factory New)",
+     "sharpe": 0.6684,
+     "ret": 0.563439,
+     "vol": 0.843,
+     "price": 239.9
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.1334,
+   "median_return": 0.204,
+   "avg_vol": 2.1919,
+   "pct_positive": 0.718,
+   "best_item": "P2000 - Silver (Factory New)",
+   "best_sharpe": 0.9137
+  }
+ },
+ "smgs": {
+  "name": "SMGs",
+  "description": "MAC-10, MP9, MP7, UMP-45, P90, PP-Bizon",
+  "n_items": 1298,
+  "equal_weight": {
+   "ret": 0.1218,
+   "risk": 1.3258,
+   "sharpe": 0.0918,
+   "n_items": 1298,
+   "top_holdings": {}
+  },
+  "max_sharpe": {
+   "ret": 0.6351,
+   "risk": 0.5628,
+   "sharpe": 1.1286,
+   "n_items": 23,
+   "top_holdings": {
+    "MAC-10 - Propaganda (Factory New)": 0.249192,
+    "MAC-10 - Propaganda (Field-Tested)": 0.130291,
+    "MP9 - Music Box (Factory New)": 0.129053,
+    "MAC-10 - Propaganda (Minimal Wear)": 0.119774,
+    "MAC-10 - Propaganda (Battle-Scarred)": 0.068673,
+    "MP9 - Hot Rod (Factory New)": 0.067837,
+    "MAC-10 - Toybox (Factory New)": 0.054486,
+    "MAC-10 - Propaganda (Well-Worn)": 0.039098,
+    "MP7 - Scorched (Minimal Wear)": 0.032857,
+    "PP-Bizon - Seabird (Factory New)": 0.028139
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "MAC-10 - Propaganda (Factory New)",
+     "sharpe": 0.8378,
+     "ret": 0.790634,
+     "vol": 0.9437,
+     "price": 274.21
+    },
+    {
+     "name": "MAC-10 - Propaganda (Field-Tested)",
+     "sharpe": 0.6616,
+     "ret": 0.597398,
+     "vol": 0.903,
+     "price": 51.35
+    },
+    {
+     "name": "MP9 - Music Box (Factory New)",
+     "sharpe": 0.6519,
+     "ret": 0.55635,
+     "vol": 0.8534,
+     "price": 67.69
+    },
+    {
+     "name": "MAC-10 - Propaganda (Minimal Wear)",
+     "sharpe": 0.6465,
+     "ret": 0.581067,
+     "vol": 0.8988,
+     "price": 79.22
+    },
+    {
+     "name": "MAC-10 - Propaganda (Battle-Scarred)",
+     "sharpe": 0.5962,
+     "ret": 0.640223,
+     "vol": 1.0738,
+     "price": 48.56
+    },
+    {
+     "name": "MP9 - Hot Rod (Factory New)",
+     "sharpe": 0.579,
+     "ret": 0.539791,
+     "vol": 0.9323,
+     "price": 387.55
+    },
+    {
+     "name": "MAC-10 - Toybox (Factory New)",
+     "sharpe": 0.5664,
+     "ret": 0.566753,
+     "vol": 1.0006,
+     "price": 164.71
+    },
+    {
+     "name": "MAC-10 - Propaganda (Well-Worn)",
+     "sharpe": 0.5523,
+     "ret": 0.624848,
+     "vol": 1.1313,
+     "price": 53.66
+    },
+    {
+     "name": "PP-Bizon - Seabird (Factory New)",
+     "sharpe": 0.5404,
+     "ret": 0.713736,
+     "vol": 1.3207,
+     "price": 14.27
+    },
+    {
+     "name": "MP7 - Scorched (Minimal Wear)",
+     "sharpe": 0.539,
+     "ret": 0.584429,
+     "vol": 1.0843,
+     "price": 11.57
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.1218,
+   "median_return": 0.2018,
+   "avg_vol": 2.6461,
+   "pct_positive": 0.708,
+   "best_item": "MAC-10 - Propaganda (Factory New)",
+   "best_sharpe": 0.8378
+  }
+ },
+ "patches": {
+  "name": "Patches",
+  "description": "All patches and patch packs",
+  "n_items": 117,
+  "equal_weight": {
+   "ret": 0.2299,
+   "risk": 0.9033,
+   "sharpe": 0.2545,
+   "n_items": 117,
+   "top_holdings": {
+    "Other (CS_GO Patch Pack)": 0.008547,
+    "Other (Half-Life_ Alyx Patch Pack)": 0.008547,
+    "Other (Stockholm 2021 Challengers Patch Pack)": 0.008547,
+    "Other (Stockholm 2021 Contenders Patch Pack)": 0.008547,
+    "Other (Stockholm 2021 Legends Patch Pack)": 0.008547,
+    "Patches (Abandon Hope)": 0.008547,
+    "Patches (Alyx)": 0.008547,
+    "Patches (Anchors Aweigh)": 0.008547,
+    "Patches (Aquatic Offensive)": 0.008547,
+    "Patches (Astralis (Gold) _ Stockholm 2021)": 0.008547
+   }
+  },
+  "max_sharpe": {
+   "ret": 0.7978,
+   "risk": 0.8239,
+   "sharpe": 0.9683,
+   "n_items": 9,
+   "top_holdings": {
+    "Patches (Bayonet Frog)": 0.348322,
+    "Patches (Dead Men)": 0.294529,
+    "Patches (Elder God)": 0.101627,
+    "Patches (Abandon Hope)": 0.086014,
+    "Patches (Aquatic Offensive)": 0.068409,
+    "Patches (Death From Below)": 0.0675,
+    "Patches (Anchors Aweigh)": 0.0217,
+    "Patches (Team Spirit (Gold) _ Stockholm 2021)": 0.008563,
+    "Patches (Cruising Ray)": 0.003336
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Patches (Bayonet Frog)",
+     "sharpe": 0.7583,
+     "ret": 0.949652,
+     "vol": 1.2524,
+     "price": 394.45
+    },
+    {
+     "name": "Patches (Dead Men)",
+     "sharpe": 0.677,
+     "ret": 0.776702,
+     "vol": 1.1473,
+     "price": 76.05
+    },
+    {
+     "name": "Patches (Elder God)",
+     "sharpe": 0.5054,
+     "ret": 0.725403,
+     "vol": 1.4353,
+     "price": 130.83
+    },
+    {
+     "name": "Patches (Aquatic Offensive)",
+     "sharpe": 0.4728,
+     "ret": 0.742674,
+     "vol": 1.5709,
+     "price": 55.66
+    },
+    {
+     "name": "Patches (Abandon Hope)",
+     "sharpe": 0.4693,
+     "ret": 0.583434,
+     "vol": 1.2433,
+     "price": 17.85
+    },
+    {
+     "name": "Patches (Death From Below)",
+     "sharpe": 0.4564,
+     "ret": 0.615104,
+     "vol": 1.3477,
+     "price": 17.22
+    },
+    {
+     "name": "Patches (Anchors Aweigh)",
+     "sharpe": 0.4082,
+     "ret": 0.66771,
+     "vol": 1.6358,
+     "price": 4.06
+    },
+    {
+     "name": "Patches (Team Spirit (Gold) _ Stockholm 2021)",
+     "sharpe": 0.3863,
+     "ret": 0.669694,
+     "vol": 1.7335,
+     "price": 44.28
+    },
+    {
+     "name": "Patches (Cruising Ray)",
+     "sharpe": 0.3821,
+     "ret": 0.547543,
+     "vol": 1.4331,
+     "price": 5.98
+    },
+    {
+     "name": "Patches (Sunset Wave)",
+     "sharpe": 0.3653,
+     "ret": 0.493829,
+     "vol": 1.3519,
+     "price": 20.18
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.2299,
+   "median_return": 0.2947,
+   "avg_vol": 1.782,
+   "pct_positive": 0.7094,
+   "best_item": "Patches (Bayonet Frog)",
+   "best_sharpe": 0.7583
+  }
+ },
+ "charms": {
+  "name": "Charms & Keychains",
+  "description": "All charms and keychains",
+  "n_items": 34,
+  "equal_weight": {
+   "ret": -0.527,
+   "risk": 0.4599,
+   "sharpe": -1.1458,
+   "n_items": 34,
+   "top_holdings": {
+    "Collectibles (Charm _ Pinch O' Salt)": 0.029412,
+    "Other (Charm _ Baby Karat CT)": 0.029412,
+    "Other (Charm _ Baby Karat T)": 0.029412,
+    "Other (Charm _ Baby's AK)": 0.029412,
+    "Other (Charm _ Backsplash)": 0.029412,
+    "Other (Charm _ Big Kev)": 0.029412,
+    "Other (Charm _ Chicken Lil')": 0.029412,
+    "Other (Charm _ Diamond Dog)": 0.029412,
+    "Other (Charm _ Die-cast AK)": 0.029412,
+    "Other (Charm _ Diner Dog)": 0.029412
+   }
+  },
+  "max_sharpe": {
+   "ret": -0.0764,
+   "risk": 2.2968,
+   "sharpe": -0.0333,
+   "n_items": 1,
+   "top_holdings": {
+    "Stickers (Primaris Keychain)": 1.0
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Stickers (Primaris Keychain)",
+     "sharpe": -0.0333,
+     "ret": -0.07638,
+     "vol": 2.2968,
+     "price": 0.24
+    },
+    {
+     "name": "Other (Charm _ Diner Dog)",
+     "sharpe": -0.2603,
+     "ret": -0.189763,
+     "vol": 0.7289,
+     "price": 6.1
+    },
+    {
+     "name": "Other (Charm _ Diamond Dog)",
+     "sharpe": -0.3219,
+     "ret": -0.184907,
+     "vol": 0.5743,
+     "price": 18.65
+    },
+    {
+     "name": "Other (Charm _ Lil' Monster)",
+     "sharpe": -0.3892,
+     "ret": -0.329129,
+     "vol": 0.8457,
+     "price": 10.12
+    },
+    {
+     "name": "Other (Charm _ Hot Howl)",
+     "sharpe": -0.4092,
+     "ret": -0.272371,
+     "vol": 0.6656,
+     "price": 62.26
+    },
+    {
+     "name": "Other (Charm _ Hot Wurst)",
+     "sharpe": -0.4381,
+     "ret": -0.655475,
+     "vol": 1.4961,
+     "price": 33.31
+    },
+    {
+     "name": "Other (Charm _ Semi-Precious)",
+     "sharpe": -0.4722,
+     "ret": -0.413126,
+     "vol": 0.8749,
+     "price": 29.91
+    },
+    {
+     "name": "Other (Charm _ Titeenium AWP)",
+     "sharpe": -0.4986,
+     "ret": -0.398888,
+     "vol": 0.8,
+     "price": 7.78
+    },
+    {
+     "name": "Other (Charm _ Die-cast AK)",
+     "sharpe": -0.5084,
+     "ret": -0.389986,
+     "vol": 0.7671,
+     "price": 5.7
+    },
+    {
+     "name": "Other (Charm _ Lil' Squirt)",
+     "sharpe": -0.5105,
+     "ret": -0.428633,
+     "vol": 0.8396,
+     "price": 5.05
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": -0.527,
+   "median_return": -0.517,
+   "avg_vol": 0.8776,
+   "pct_positive": 0.0,
+   "best_item": "Stickers (Primaris Keychain)",
+   "best_sharpe": -0.0333
+  }
+ },
+ "agents": {
+  "name": "Agents",
+  "description": "Character model skins",
+  "n_items": 161,
+  "equal_weight": {
+   "ret": 0.1681,
+   "risk": 1.0038,
+   "sharpe": 0.1675,
+   "n_items": 161,
+   "top_holdings": {
+    "Cases (Danger Zone Case Key)": 0.006211,
+    "Cases (Danger Zone Case)": 0.006211,
+    "Cases (Operation Phoenix Case Key)": 0.006211,
+    "Cases (Operation Phoenix Weapon Case)": 0.006211,
+    "Collectibles (Phoenix Pin)": 0.006211,
+    "Collectibles (Valeria Phoenix Pin)": 0.006211,
+    "Graffiti (Avangar _ Boston 2018)": 0.006211,
+    "Graffiti (Phoenix)": 0.006211,
+    "Music Kits (Lennie Moore, Java Havana Funkaloo)": 0.006211,
+    "Other ('Blueberries' Buckshot _ NSWC SEAL)": 0.006211
+   }
+  },
+  "max_sharpe": {
+   "ret": 0.5828,
+   "risk": 0.5202,
+   "sharpe": 1.1205,
+   "n_items": 17,
+   "top_holdings": {
+    "Other (D Squadron Officer _ NZSAS)": 0.191831,
+    "Other (Getaway Sally _ The Professionals)": 0.110548,
+    "Other (Sir Bloody Loudmouth Darryl _ The Professionals)": 0.090315,
+    "Other (Sir Bloody Miami Darryl _ The Professionals)": 0.083174,
+    "Other (Sir Bloody Darryl Royale _ The Professionals)": 0.070035,
+    "Other (Cmdr. Davida 'Goggles' Fernandez _ SEAL Frogman)": 0.067286,
+    "Other (Lt. Commander Ricksaw _ NSWC SEAL)": 0.064189,
+    "Other ('Blueberries' Buckshot _ NSWC SEAL)": 0.061816,
+    "Other (Number K _ The Professionals)": 0.056608,
+    "Other (Street Soldier _ Phoenix)": 0.053632
+   }
+  },
+  "top10_sharpe": {
+   "items": [
+    {
+     "name": "Other (D Squadron Officer _ NZSAS)",
+     "sharpe": 0.7686,
+     "ret": 0.673714,
+     "vol": 0.8765,
+     "price": 94.1
+    },
+    {
+     "name": "Other (Getaway Sally _ The Professionals)",
+     "sharpe": 0.6641,
+     "ret": 0.625993,
+     "vol": 0.9426,
+     "price": 104.95
+    },
+    {
+     "name": "Other (Sir Bloody Loudmouth Darryl _ The Professionals)",
+     "sharpe": 0.6195,
+     "ret": 0.51846,
+     "vol": 0.8369,
+     "price": 99.84
+    },
+    {
+     "name": "Other ('Blueberries' Buckshot _ NSWC SEAL)",
+     "sharpe": 0.6109,
+     "ret": 0.69162,
+     "vol": 1.1322,
+     "price": 30.46
+    },
+    {
+     "name": "Other (Sir Bloody Miami Darryl _ The Professionals)",
+     "sharpe": 0.6081,
+     "ret": 0.500177,
+     "vol": 0.8225,
+     "price": 127.19
+    },
+    {
+     "name": "Other (Street Soldier _ Phoenix)",
+     "sharpe": 0.6036,
+     "ret": 0.736717,
+     "vol": 1.2205,
+     "price": 37.68
+    },
+    {
+     "name": "Other (Sir Bloody Darryl Royale _ The Professionals)",
+     "sharpe": 0.5986,
+     "ret": 0.541387,
+     "vol": 0.9044,
+     "price": 64.68
+    },
+    {
+     "name": "Other (Little Kev _ The Professionals)",
+     "sharpe": 0.5895,
+     "ret": 0.659798,
+     "vol": 1.1192,
+     "price": 62.34
+    },
+    {
+     "name": "Other (Lt. Commander Ricksaw _ NSWC SEAL)",
+     "sharpe": 0.5866,
+     "ret": 0.509543,
+     "vol": 0.8687,
+     "price": 51.92
+    },
+    {
+     "name": "Other (Cmdr. Davida 'Goggles' Fernandez _ SEAL Frogman)",
+     "sharpe": 0.5811,
+     "ret": 0.440289,
+     "vol": 0.7576,
+     "price": 77.98
+    }
+   ]
+  },
+  "index_stats": {
+   "avg_return": 0.1681,
+   "median_return": 0.0673,
+   "avg_vol": 1.9781,
+   "pct_positive": 0.6832,
+   "best_item": "Other (D Squadron Officer _ NZSAS)",
+   "best_sharpe": 0.7686
+  }
+ }
+}
